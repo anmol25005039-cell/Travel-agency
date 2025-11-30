@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Make your own trip</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:Arial, sans-serif; line-height:1.6; color:#333; }
+    
+    nav {
+      position:fixed;
+      top:0; width:100%;
+      background:rgba(0,0,0,0.85);
+      padding:15px 0;
+      text-align:center;
+      z-index:1000;
+    }
+    nav a {
+      color:white;
+      text-decoration:none;
+      margin:0 15px;
+      font-weight:500;
+    }
+    nav a:hover { color:#ff6bc5ff; }
+
+    header {
+      height:100vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+                  url('https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=1600') center/cover;
+      color:white;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:0 20px;
+    }
+    header h1 { font-size:3.5rem; margin-bottom:15px; }
+    header p { font-size:1.3rem; max-width:600px; margin-bottom:25px; }
+    .btn {
+      background:#ff6b6b;
+      color:white;
+      padding:12px 30px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    .btn:hover { background:#ff5252; }
+
+    section { padding:80px 5%; }
+    h2 { text-align:center; font-size:2.5rem; margin-bottom:50px; color:#2c3e50; }
+
+    .packages, .gallery {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+      gap:25px;
+    }
+    .card {
+      background:white;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    }
+    .card img { width:100%; height:200px; object-fit:cover; }
+    .info { padding:20px; text-align:center; }
+    .price { font-size:1.8rem; color:#ff6b6b; font-weight:bold; margin:10px 0; }
+
+    .gallery img {
+      width:100%;
+      height:280px;
+      object-fit:cover;
+      border-radius:12px;
+      transition:0.3s;
+    }
+    .gallery img:hover { transform:scale(1.05); }
+
+    .tips {
+      background:#f9f9f9;
+      text-align:center;
+    }
+    .tip-grid {
+      max-width:1000px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+      gap:25px;
+    }
+    .tip {
+      background:white;
+      padding:25px;
+      border-radius:12px;
+    }
+    .tip h3 { color:#ff6b6b; margin-bottom:10px; }
+
+    footer {
+      background:#2c3e50;
+      color:white;
+      text-align:center;
+      padding:40px 20px;
+    }
+
+    @media (max-width:768px) {
+      header h1 { font-size:2.5rem; }
+      nav a { margin:0 8px; font-size:0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#packages">Packages</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#tips">Tips</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header id="home">
+    <h1>MAKE YOUR OWN TRIP</h1>
+    <p>Discover the world's most beautiful destinations with our exclusive tour packages.</p>
+    <a href="#packages" class="btn">Explore Now</a>
+  </header>
+
+  <section id="packages">
+    <h2>Popular and loved Packages</h2>
+    <div class="packages">
+      <div class="card">
+        <img src="baliimage1.jpg" alt="Bali">
+        <div class="info">
+          <h3>Bali Escape</h3>
+          <p>7 Days • Beach • Culture</p>
+          <div class="price">₹129999</div>
+          <a href="#" class="btn" style="padding:10px 20px;font-size:0.9rem;">Book Now</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=800" alt="Japan">
+        <div class="info">
+          <h3>Japan Discovery</h3>
+          <p>10 Days • Temples • Food</p>
+          <div class="price">₹200000</div>
+          <a href="#" class="btn" style="padding:10px 20px;font-size:0.9rem;">Book Now</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1586016413664-864c0dd76f53?w=800" alt="Maldives">
+        <div class="info">
+          <h3>Maldives Luxury</h3>
+          <p>5 Days • Overwater Villa</p>
+          <div class="price">₹300000</div>
+          <a href="#" class="btn" style="padding:10px 20px;font-size:0.9rem;">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Best Destinations</h2>
+    <div class="gallery">
+      <img src="italy.jpg" alt="italy">
+      <img src="morocco.jpg" alt="Morocco">
+      <img src="maldives.jpg" alt="Maldives">
+      <img src="baliimage1.jpg" alt="bali">
+      <img src="newyork.jpg" alt="New York">
+      <img src="goa.jpg" alt="Goa">
+    </div>
+  </section>
+
+  <section id="tips" class="tips">
+    <h2>Travel Tips</h2>
+    <div class="tip-grid">
+      <div class="tip">
+        <h3>Pack Light</h3>
+        <p>Roll clothes, use packing cubes, and bring only essentials.</p>
+      </div>
+      <div class="tip">
+        <h3>Book Early</h3>
+        <p>Best prices and availability come 3–6 months in advance.</p>
+      </div>
+      <div class="tip">
+        <h3>Get Insurance</h3>
+        <p>Always protect your trip against unexpected events.</p>
+      </div>
+      <div class="tip">
+        <h3>Stay Connected</h3>
+        <p>Use eSIM or local SIM for maps and translation & maps.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>&copy; 2025 Make Your Own Trip • hello@makeyourowntrip.com • +1 (555) 123-4567</p>
+  </footer>
+
+</body>
+</html>
